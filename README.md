@@ -17,8 +17,6 @@ Install dependencies: npm install or yarn install
 
 Run the development server: npm run dev or yarn dev
 
-Access the application via the provided localhost address.
-
 ```yarn install```
 ```yarn dev```
 
