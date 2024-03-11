@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 interface ProductWidgetSettingsProps {
   widget: {
     id: number;
-    type: string;
+    type: "carbon" | "plastic bottles" | "trees";
     amount: number;
-    action: string;
+    action: "collects" | "plants" | "offsets";
     active: boolean;
     linked: boolean;
-    selectedColor: string;
+    selectedColor: "white" | "black" | "blue" | "green" | "beige";
   };
   onUpdateSettings: (updatedSettings: Partial<ProductWidgetSettings>) => void;
 }

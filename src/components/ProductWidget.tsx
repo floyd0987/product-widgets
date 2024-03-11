@@ -13,12 +13,12 @@ interface Props {
 
 interface ProductWidgetSettings {
   id: number;
-  type: string;
+  type: "carbon" | "plastic bottles" | "trees";
   amount: number;
-  action: string;
+  action: "collects" | "plants" | "offsets";
   active?: boolean;
   linked?: boolean;
-  selectedColor?: string;
+  selectedColor?: "white" | "black" | "blue" | "green" | "beige";
 }
 
 const ProductWidget: React.FC<Props> = ({ widgetSetting }) => {
