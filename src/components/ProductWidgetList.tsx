@@ -8,6 +8,7 @@ const ProductWidgetList: React.FC = () => {
   const { data: productWidgets, isLoading, error } = useProductWidgets();
 
   const { widgetSettings, setWidgetSettings } = useWidgetContext();
+
   useEffect(() => {
     setWidgetSettings(productWidgets);
   }, [productWidgets]);
@@ -26,11 +27,8 @@ const ProductWidgetList: React.FC = () => {
             />
           ))}
       </div>
-
-
     </>
   );
 };
 
 export default ProductWidgetList;
-

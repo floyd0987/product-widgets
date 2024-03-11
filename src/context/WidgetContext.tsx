@@ -3,8 +3,6 @@ import React, { createContext, useContext, useState } from "react";
 export const WidgetContext = createContext({});
 
 const WidgetContextProvider = ({ children }: { children: React.ReactNode }) => {
-  const [activeWidget, setActiveWidget] = useState(false);
-
   const [widgetSettings, setWidgetSettings] = useState<
     { id: number; active: boolean }[]
   >([]);
@@ -37,8 +35,6 @@ const WidgetContextProvider = ({ children }: { children: React.ReactNode }) => {
   return (
     <WidgetContext.Provider
       value={{
-        activeWidget,
-        setActiveWidget,
         handleUpdateSettings,
         widgetSettings,
         setWidgetSettings,
