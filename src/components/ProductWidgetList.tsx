@@ -26,8 +26,6 @@ const ProductWidgetList: React.FC = () => {
             />
           ))}
       </div>
-
-      {/* <pre>{JSON.stringify(widgetSettings, null, 2)}</pre> */}
     </>
   );
 };

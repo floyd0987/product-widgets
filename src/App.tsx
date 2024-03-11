@@ -10,8 +10,8 @@ const App: React.FC = () => {
     <QueryClientProvider client={queryClient}>
        <WidgetContextProvider>
       <div className="App p-20 max-w-6xl mx-auto my-20 border rounded-lg bg-[#f9f9f9]">
-        <h1 className='text-2xl font-bold'>Per product widgets</h1>
-        <hr className='my-4 border-2' />
+        <h1 className='text-3xl font-bold'>Per product widgets</h1>
+        <hr className='my-4 border-2 border-gray-300	' />
         <ProductWidgetList />
       </div>
       </WidgetContextProvider>
