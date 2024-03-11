@@ -8,8 +8,6 @@ Customization: Users can customize their widgets by modifying settings such as "
 
 State Management: React Context API is employed for managing the state of the application
 
-Testing: Unit tests have been implemented to ensure the stability and functionality of the user interface.
-
 
 Clone the repository: git clone <repository-url>
 
