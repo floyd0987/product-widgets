@@ -26,6 +26,8 @@ const ProductWidgetList: React.FC = () => {
             />
           ))}
       </div>
+
+
     </>
   );
 };

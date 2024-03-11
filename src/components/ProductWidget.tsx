@@ -3,7 +3,6 @@ import ColorPicker from "./ui/ColorPicker.tsx";
 import { Switch } from "@/components/ui/switch";
 import { colors } from "@/constants";
 import { WidgetContext } from "../context/WidgetContext";
-import Logo from "../assets/logo.tsx";
 import Link from "./ui/Link.tsx";
 import Tooltip from "./ui/Tooltip.tsx";
 import Badge from "./ui/Badge.tsx";
@@ -52,7 +51,7 @@ const ProductWidget: React.FC<Props> = ({ widgetSetting }) => {
           <div className="">
             <Link
               checked={linked}
-              onChange={(e) =>
+              onChange={(e:React.ChangeEvent<HTMLInputElement>) =>
                 handleProductWidgetSettings({ linked: e.target.checked })
               }
             />

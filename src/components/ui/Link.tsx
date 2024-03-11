@@ -1,7 +1,7 @@
 import React from "react";
 
 interface Props {
-  onChange: () => unknown;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   checked: boolean | undefined;
 }
 
