@@ -1,6 +1,6 @@
 import { useQuery } from 'react-query';
 
-const API_URL = 'https://api.mocki.io/v2/016d11e8/product-widgets';
+const API_URL = 'https://api.mocki.io/v2/016d11e8/v2/product-widgets';
 
 export const fetchProductWidgets = async () => {
     try {

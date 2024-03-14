@@ -65,6 +65,7 @@ const ProductWidget: React.FC<Props> = ({ widgetSetting }) => {
             onSelectColor={(selectedColor) =>
               handleProductWidgetSettings({ selectedColor })
             }
+            active={active}
           />
         </div>
 

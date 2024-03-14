@@ -18,7 +18,7 @@ const ProductWidgetList: React.FC = () => {
 
   return (
     <>
-      <div className="grid grid-flow-row lg:grid-flow-col gap-20 my-8">
+      <div className="grid lg:grid-cols-3	gap-4 my-8">
         {widgetSettings &&
           widgetSettings.map((widgetSetting: any) => (
             <ProductWidget
