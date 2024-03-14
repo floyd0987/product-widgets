@@ -1,8 +1,12 @@
 import React, { createContext, useContext, useState } from "react";
 
+export type WidgetContextType = {
+  widgetSettings: { id: number; active: boolean }[];
+  setWidgetSettings: React.Dispatch<React.SetStateAction<{ id: number; active: boolean }[]>>
+  handleUpdateSettings: (id:number,propertyValue: {active:boolean}) => void;
+}
 
-
-export const WidgetContext = createContext({});
+export const WidgetContext = createContext<WidgetContextType | undefined>(undefined);
 
 const WidgetContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [widgetSettings, setWidgetSettings] = useState<
@@ -47,6 +51,6 @@ const WidgetContextProvider = ({ children }: { children: React.ReactNode }) => {
   );
 };
 
-export const useWidgetContext = () => useContext(WidgetContext);
+export const useWidgetContext = () => useContext<any>(WidgetContext);
 
 export default WidgetContextProvider;

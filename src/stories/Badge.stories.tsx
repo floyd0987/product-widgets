@@ -18,7 +18,11 @@ export const Primary: Story = {
   render: () => (
     <div className="m-8 mx-auto center" style={{ maxWidth: 300 }}>
       <Badge
-        color={"green"}
+        color={{
+          name: "green",
+          bgColor: "#3B755F",
+          textColor: "#fff"
+      }}
         amount={200}
         action={"collects"}
         type={"plastic bottles"}

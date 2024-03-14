@@ -35,7 +35,7 @@ const ProductWidgetSettings: React.FC<ProductWidgetSettingsProps> = ({ widget, o
   return (
     <div>
       <label>Color:</label>
-      <select value={color} onChange={(e) => setColor(e.target.value)}>
+      <select value={color} onChange={(e:any) => setColor(e.target.value)}>
         <option value="white">White</option>
         <option value="black">Black</option>
         <option value="blue">Blue</option>

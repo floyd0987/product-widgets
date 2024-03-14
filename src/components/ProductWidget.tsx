@@ -18,14 +18,14 @@ interface ProductWidgetSettings {
   action: "collects" | "plants" | "offsets";
   active?: boolean;
   linked?: boolean;
-  selectedColor?: "white" | "black" | "blue" | "green" | "beige";
+  selectedColor?: string;
 }
 
 const ProductWidget: React.FC<Props> = ({ widgetSetting }) => {
   const { id, type, amount, action, active, linked, selectedColor } =
     widgetSetting;
 
-  const { handleUpdateSettings } = useContext(WidgetContext);
+  const { handleUpdateSettings } = useContext<any>(WidgetContext);
 
   const handleProductWidgetSettings = (
     updatedSettings: Partial<ProductWidgetSettings>

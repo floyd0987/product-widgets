@@ -4,6 +4,9 @@ import { useProductWidgets } from "../services/productWidgetService";
 import ProductWidget from "./ProductWidget";
 import { useWidgetContext } from "../context/WidgetContext";
 
+
+
+
 const ProductWidgetList: React.FC = () => {
   const { data: productWidgets, isLoading, error } = useProductWidgets();
 

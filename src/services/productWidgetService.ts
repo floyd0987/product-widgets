@@ -2,6 +2,10 @@ import { useQuery } from 'react-query';
 
 const API_URL = 'https://api.mocki.io/v2/016d11e8/v2/product-widgets';
 
+type ErrorType = {
+    message: string;
+};
+
 export const fetchProductWidgets = async () => {
     try {
         const response = await fetch(API_URL);
@@ -15,6 +19,6 @@ export const fetchProductWidgets = async () => {
     }
 };
 
-export const useProductWidgets = () => {
+export const useProductWidgets = ():{data:any, isLoading:boolean, error:ErrorType| null} => {
     return useQuery('productWidgets', fetchProductWidgets);
 };
