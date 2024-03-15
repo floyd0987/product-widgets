@@ -3,12 +3,12 @@ import React, { useState } from 'react';
 interface ProductWidgetSettingsProps {
   widget: {
     id: number;
-    type: "carbon" | "plastic bottles" | "trees";
+    type: string;
     amount: number;
-    action: "collects" | "plants" | "offsets";
+    action: string;
     active: boolean;
     linked: boolean;
-    selectedColor: "white" | "black" | "blue" | "green" | "beige";
+    selectedColor: string;
   };
   onUpdateSettings: (updatedSettings: Partial<ProductWidgetSettings>) => void;
 }
@@ -35,7 +35,7 @@ const ProductWidgetSettings: React.FC<ProductWidgetSettingsProps> = ({ widget, o
   return (
     <div>
       <label>Color:</label>
-      <select value={color} onChange={(e:any) => setColor(e.target.value)}>
+      <select value={color} onChange={(e:React.ChangeEvent<HTMLSelectElement>) => setColor(e.target.value)}>
         <option value="white">White</option>
         <option value="black">Black</option>
         <option value="blue">Blue</option>

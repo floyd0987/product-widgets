@@ -6,7 +6,7 @@ export type WidgetContextType = {
   handleUpdateSettings: (id:number,propertyValue: {active:boolean}) => void;
 }
 
-export const WidgetContext = createContext<WidgetContextType | undefined>(undefined);
+export const WidgetContext = createContext<WidgetContextType | null>(null);
 
 const WidgetContextProvider = ({ children }: { children: React.ReactNode }) => {
   const [widgetSettings, setWidgetSettings] = useState<

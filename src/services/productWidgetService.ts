@@ -6,6 +6,16 @@ type ErrorType = {
     message: string;
 };
 
+export type ProductWidget = {
+    id: number;
+    type: string;
+    amount: number;
+    action: string;
+    active: boolean;
+    linked: boolean;
+    selectedColor: string;
+};
+
 export const fetchProductWidgets = async () => {
     try {
         const response = await fetch(API_URL);
@@ -19,6 +29,6 @@ export const fetchProductWidgets = async () => {
     }
 };
 
-export const useProductWidgets = ():{data:any, isLoading:boolean, error:ErrorType| null} => {
+export const useProductWidgets = ():{data:ProductWidget[] | undefined, isLoading:boolean, error:ErrorType | null} => {
     return useQuery('productWidgets', fetchProductWidgets);
 };
